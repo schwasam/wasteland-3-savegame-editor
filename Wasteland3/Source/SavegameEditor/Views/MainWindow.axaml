@@ -1,0 +1,58 @@
+﻿<FluentWindow
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:pages="clr-namespace:Views"
+  xmlns:vm="clr-namespace:ViewModels"
+  x:Class="Views.MainWindow"
+  d:DesignWidth="1024"
+  d:DesignHeight="768"
+  mc:Ignorable="d"
+  Width="1024"
+  Height="768"
+  Title="Wasteland 3 Savegame Editor"
+  Icon="/Assets/avalonia-logo.ico">
+  <Design.DataContext>
+    <vm:MainWindowViewModel />
+  </Design.DataContext>
+
+  <DockPanel>
+    <Menu DockPanel.Dock="Top">
+      <MenuItem Header="_File">
+        <MenuItem Header="_Open" />
+        <Separator />
+        <MenuItem Header="_Save" />
+        <Separator />
+        <MenuItem Header="E_xit" />
+      </MenuItem>
+      <MenuItem Header="_Help">
+        <MenuItem Header="_About" />
+      </MenuItem>
+    </Menu>
+
+    <TabControl TabStripPlacement="Left">
+      <TabItem
+        Header="General"
+        ScrollViewer.HorizontalScrollBarVisibility="Auto"
+        ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <pages:GeneralPage />
+      </TabItem>
+      <TabItem Header="Characters">
+        <pages:CharactersPage />
+      </TabItem>
+      <TabItem
+        Header="Items"
+        ScrollViewer.HorizontalScrollBarVisibility="Auto"
+        ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <pages:ItemsPage />
+      </TabItem>
+      <TabItem
+        Header="Globals"
+        ScrollViewer.HorizontalScrollBarVisibility="Auto"
+        ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <pages:GlobalsPage />
+      </TabItem>
+    </TabControl>
+  </DockPanel>
+</FluentWindow>

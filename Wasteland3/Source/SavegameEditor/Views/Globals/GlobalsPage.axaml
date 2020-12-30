@@ -1,0 +1,28 @@
+<UserControl
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:vm="clr-namespace:ViewModels"
+  x:Class="Views.GlobalsPage"
+  d:DesignWidth="1024"
+  d:DesignHeight="768"
+  mc:Ignorable="d">
+  <Design.DataContext>
+    <vm:MainWindowViewModel />
+  </Design.DataContext>
+
+  <StackPanel>
+    <Button
+      Content="Add New Global"
+      Command="{Binding AddNewGlobal}" />
+    <DataGrid
+        Name="dataGrid1"
+        Items="{Binding GameState.GlobalData}">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Key" Binding="{Binding Key}" Width="2*" />
+        <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="2*" />
+      </DataGrid.Columns>
+    </DataGrid>
+  </StackPanel>
+</UserControl>

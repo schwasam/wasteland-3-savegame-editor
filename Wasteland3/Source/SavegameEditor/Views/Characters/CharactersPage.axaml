@@ -1,0 +1,39 @@
+<UserControl
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:vm="clr-namespace:ViewModels"
+  x:Class="Views.CharactersPage"
+  d:DesignWidth="1024"
+  d:DesignHeight="768"
+  mc:Ignorable="d">
+  <Design.DataContext>
+    <vm:MainWindowViewModel />
+  </Design.DataContext>
+
+  <StackPanel
+    Orientation="Horizontal"
+    HorizontalAlignment="Center"
+    Margin="0 16 0 0"
+    Spacing="8">
+    <Button
+      Name="left"
+      VerticalAlignment="Center">
+      <Path Data="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" Fill="Black" />
+    </Button>
+    <Carousel Name="carousel">
+      <Carousel.PageTransition>
+        <PageSlide Duration="0.25" Orientation="Vertical" />
+      </Carousel.PageTransition>
+      <Image Source="/Assets/avalonia-logo.ico" />
+      <Image Source="/Assets/avalonia-logo.ico" />
+      <Image Source="/Assets/avalonia-logo.ico" />
+    </Carousel>
+    <Button
+      Name="right"
+      VerticalAlignment="Center">
+      <Path Data="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" Fill="Black" />
+    </Button>
+  </StackPanel>
+</UserControl>
