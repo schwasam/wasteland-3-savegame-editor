@@ -11,14 +11,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{68EC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LZF", "Source\Library\LZF\LZF.csproj", "{2D44012E-445D-49A2-83A5-E36DA57FCB6F}"
 EndProject
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "SavegameEditor", "Source\SavegameEditor\SavegameEditor.fsproj", "{F27EE92A-22E9-4009-A2E3-57294D290649}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LZF.Test", "Test\LZF.Test\LZF.Test.csproj", "{24A2108B-2A75-46F5-A7BF-82C6A954AA66}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BE343891-D0BB-4F12-81AE-E2303EA0721C}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 	EndProjectSection
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "SavegameEditor.Core", "Source\SavegameEditor.Core\SavegameEditor.Core.fsproj", "{002C79BB-E651-4090-8C68-36F7C94B38C8}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SavegameEditor.UI", "Source\SavegameEditor.UI\SavegameEditor.UI.fsproj", "{191B5D8E-ADCE-4637-AF63-4CE8F229A6F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,14 +32,18 @@ Global
 		{2D44012E-445D-49A2-83A5-E36DA57FCB6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D44012E-445D-49A2-83A5-E36DA57FCB6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D44012E-445D-49A2-83A5-E36DA57FCB6F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F27EE92A-22E9-4009-A2E3-57294D290649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F27EE92A-22E9-4009-A2E3-57294D290649}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F27EE92A-22E9-4009-A2E3-57294D290649}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F27EE92A-22E9-4009-A2E3-57294D290649}.Release|Any CPU.Build.0 = Release|Any CPU
 		{24A2108B-2A75-46F5-A7BF-82C6A954AA66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{24A2108B-2A75-46F5-A7BF-82C6A954AA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24A2108B-2A75-46F5-A7BF-82C6A954AA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24A2108B-2A75-46F5-A7BF-82C6A954AA66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{002C79BB-E651-4090-8C68-36F7C94B38C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{002C79BB-E651-4090-8C68-36F7C94B38C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{002C79BB-E651-4090-8C68-36F7C94B38C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{002C79BB-E651-4090-8C68-36F7C94B38C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{191B5D8E-ADCE-4637-AF63-4CE8F229A6F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{191B5D8E-ADCE-4637-AF63-4CE8F229A6F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{191B5D8E-ADCE-4637-AF63-4CE8F229A6F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{191B5D8E-ADCE-4637-AF63-4CE8F229A6F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,8 +51,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{68EC4B84-C579-440B-ACC7-0236E1A0D17A} = {77D5CA11-4288-448F-B5CF-E9D5CC87B6D6}
 		{2D44012E-445D-49A2-83A5-E36DA57FCB6F} = {68EC4B84-C579-440B-ACC7-0236E1A0D17A}
-		{F27EE92A-22E9-4009-A2E3-57294D290649} = {77D5CA11-4288-448F-B5CF-E9D5CC87B6D6}
 		{24A2108B-2A75-46F5-A7BF-82C6A954AA66} = {8EEABB5D-867C-44B1-BFF9-A28B80B1F6E9}
+		{002C79BB-E651-4090-8C68-36F7C94B38C8} = {77D5CA11-4288-448F-B5CF-E9D5CC87B6D6}
+		{191B5D8E-ADCE-4637-AF63-4CE8F229A6F8} = {77D5CA11-4288-448F-B5CF-E9D5CC87B6D6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D81FBCC7-267B-47C6-9FBC-36C8D5EB7537}
