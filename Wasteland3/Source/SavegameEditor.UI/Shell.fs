@@ -36,15 +36,6 @@ module Shell =
                     [ TabControl.tabStripPlacement Dock.Top
                       TabControl.viewItems
                         [ TabItem.create
-                            [ TabItem.header "TreeView Page"
-                              TabItem.content (ViewBuilder.Create<TreeViewPage.Host>([])) ]
-                          TabItem.create
-                            [ TabItem.header "User Profiles Page"
-                              TabItem.content (ViewBuilder.Create<UserProfiles.Host>([])) ]
-                          TabItem.create
-                            [ TabItem.header "About"
-                              TabItem.content (About.view state.aboutState (AboutMsg >> dispatch)) ]
-                          TabItem.create
                             [ TabItem.header "General"
                               TabItem.content (ViewBuilder.Create<General.Host>([])) ]
                           TabItem.create
@@ -52,7 +43,16 @@ module Shell =
                               TabItem.content (ViewBuilder.Create<Items.Host>([])) ]
                           TabItem.create
                             [ TabItem.header "Globals"
-                              TabItem.content (ViewBuilder.Create<Globals.Host>([])) ] ] ] ] ]
+                              TabItem.content (ViewBuilder.Create<Globals.Host>([])) ] 
+                          TabItem.create
+                            [ TabItem.header "TreeView Page"
+                              TabItem.content (ViewBuilder.Create<TreeViewPage.Host>([])) ]
+                          TabItem.create
+                            [ TabItem.header "User Profiles Page"
+                              TabItem.content (ViewBuilder.Create<UserProfiles.Host>([])) ]
+                          TabItem.create
+                            [ TabItem.header "About"
+                              TabItem.content (About.view state.aboutState (AboutMsg >> dispatch)) ] ] ] ] ]
 
     type MainWindow() as this =
         inherit HostWindow()

@@ -18,27 +18,22 @@ module Globals =
         match msg with
         | Show -> { state with globals = Array.empty }
 
+    // TODO: how to create a DataGrid with FuncUI?
+    (*<DataGrid
+        Name="dataGrid1"
+        Items="{Binding GameState.GlobalData}">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Key" Binding="{Binding Key}" Width="2*" />
+        <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="2*" />
+      </DataGrid.Columns>
+    </DataGrid>*)
+
+    // TODO: logic for adding a new global
     let view (state: State) (dispatch) =
-        StackPanel.create [
-            StackPanel.children [
-                Button.create [
-                    Button.content "Add New Global"
-                    // TODO: logic for adding a new global
-                ]
-                // TODO: how to create a DataGrid with FuncUI?
-                (*<DataGrid
-                    Name="dataGrid1"
-                    Items="{Binding GameState.GlobalData}">
-                  <DataGrid.Columns>
-                    <DataGridTextColumn Header="Key" Binding="{Binding Key}" Width="2*" />
-                    <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="2*" />
-                  </DataGrid.Columns>
-                </DataGrid>*)
-                TextBlock.create [
-                    TextBlock.text "Coming Soon!"
-                ]
-            ]
-        ]
+        StackPanel.create
+            [ StackPanel.children
+                [ Button.create
+                    [ Button.content "Add New Global" ] ] ]
 
     type Host() as this =
         inherit Hosts.HostControl()

@@ -19,26 +19,25 @@ module Items =
         | Show -> { state with items = Array.empty }
 
     let view (state: State) (dispatch) =
-        StackPanel.create [
-            StackPanel.children [
-                Button.create [
-                    Button.content "Add New Item"
-                    // TODO: logic for adding a new item
-                ]
-                // TODO: how to create a DataGrid with FuncUI?
-                (*<DataGrid
-                    Name="dataGrid1"
-                    Items="{Binding GameState.ItemsData}">
-                  <DataGrid.Columns>
-                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="2*" />
-                    <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="2*" />
-                  </DataGrid.Columns>
-                </DataGrid>*)
-                TextBlock.create [
-                    TextBlock.text "Coming Soon!"
-                ]
-            ]
-        ]
+        let dg = DataGrid()
+        dg.Items <- [ { Name = "Item1"; Quantity = 1u } ]
+        dg.AutoGenerateColumns <- true
+
+        // TODO: how to create a DataGrid with FuncUI?
+        (*<DataGrid
+            Name="dataGrid1"
+            Items="{Binding GameState.ItemsData}">
+          <DataGrid.Columns>
+            <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="2*" />
+            <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="2*" />
+          </DataGrid.Columns>
+        </DataGrid>*)
+
+        // TODO: logic for adding a new item
+        StackPanel.create
+            [ StackPanel.children
+                [ Button.create
+                    [ Button.content "Add New Item" ] ] ]
 
     type Host() as this =
         inherit Hosts.HostControl()
